@@ -5,21 +5,7 @@ import { ref } from 'vue'
 import { initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage  } from "firebase/messaging";
 
-
-const firebaseConfig = {
-    apiKey: "AIzaSyAybS4iUmKE1ifGPgjV33NHf22w5fX6ZZA",
-    authDomain: "vue-pwa-notification-a0025.firebaseapp.com",
-    projectId: "vue-pwa-notification-a0025",
-    storageBucket: "vue-pwa-notification-a0025.appspot.com",
-    messagingSenderId: "30081941634",
-    appId: "1:30081941634:web:5e71516abebcfa5e52349b"
-};
-
 let token = ref();
-
-
-const app = initializeApp(firebaseConfig);
-
 
 // Get registration token. Initially this makes a network call, once retrieved
 // subsequent calls to getToken will return from cache.
